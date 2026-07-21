@@ -1,0 +1,223 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@view-transition {
+  navigation: auto;
+}
+
+@theme {
+  --font-roboto-flex: var(--font-roboto-flex);
+  --font-times: "Times New Roman", Times, serif;
+
+  --tracking-tight: 0.02em;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.06em;
+
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 1.1em;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.1em;
+
+  /* --color-*: initial; */
+
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f0efef;
+  --color-neutral-100: #e4e4e7;
+  --color-neutral-200: #cacace;
+  --color-neutral-300: #aaaab1;
+  --color-neutral-400: #76767f;
+  --color-neutral-500: #58585f;
+  --color-neutral-600: #3b3b40;
+  --color-neutral-700: #27272a;
+  --color-neutral-800: #141415;
+  --color-neutral-900: #020203;
+
+  --semantic-color-background-primary: var(--color-neutral-50);
+  --semantic-color-background-secondary: var(--color-neutral-100);
+  --semantic-color-background-inverted-primary: var(--color-neutral-900);
+  --semantic-color-background-inverted-secondary: var(--color-neutral-800);
+
+  --semantic-color-text-primary: var(--color-neutral-900);
+  --semantic-color-text-secondary: var(--color-neutral-600);
+  --semantic-color-text-tertiary: var(--color-neutral-400);
+  --semantic-color-text-inverted-primary: var(--color-neutral-50);
+  --semantic-color-text-inverted-secondary: var(--color-neutral-300);
+  --semantic-color-text-inverted-teriarty: var(--color-neutral-600);
+
+  --semantic-color-border-primary: var(--color-neutral-900);
+}
+
+.dark {
+  --semantic-color-background-primary: var(--color-neutral-900);
+  --semantic-color-background-secondary: var(--color-neutral-800);
+  --semantic-color-background-inverted-primary: var(--color-neutral-50);
+  --semantic-color-background-inverted-secondary: var(--color-neutral-100);
+
+  --semantic-color-text-primary: var(--color-neutral-50);
+  --semantic-color-text-secondary: var(--color-neutral-300);
+  --semantic-color-text-tertiary: var(--color-neutral-600);
+  --semantic-color-text-inverted-primary: var(--color-neutral-900);
+  --semantic-color-text-inverted-secondary: var(--color-neutral-600);
+  --semantic-color-text-inverted-teriarty: var(--color-neutral-400);
+
+  --semantic-color-border-primary: var(--color-neutral-50);
+}
+
+@custom-variant hover (&:hover);
+
+@utility bg-* {
+  background-color: --value(--semantic-color-background-*);
+  background-color: --value(--color-*);
+}
+
+@utility text-* {
+  color: --value(--semantic-color-text-*);
+  font-size: --value(--text-*);
+  line-height: --value(--text-* --line-height);
+}
+
+@utility border-* {
+  --border-alpha: calc(--modifier(integer) * 1%);
+  --border-alpha: --modifier([percentage]);
+
+  border-color: --alpha(--value(--semantic-color-border-*) / var(--border-alpha, 100%));
+}
+
+@utility container {
+  @apply mx-auto max-w-[72rem] px-6;
+}
+
+@utility font-robot-flex-variation-01 {
+  font-variation-settings: "YTLC" 487;
+}
+
+@utility font-robot-flex-variation-02 {
+  font-variation-settings: "wdth" 151;
+}
+
+@utility focused {
+  @apply outline-2 outline-offset-1 outline-[red] outline-dashed;
+}
+
+@utility bolder {
+  @apply font-times leading-0 font-bold -tracking-wide;
+  font-size: 1.1em;
+}
+
+@layer base {
+  :focus,
+  :focus-visible {
+    @apply focused;
+  }
+
+  :root {
+    font-size: calc(16px + 0.35vw);
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-primary bg-primary font-roboto-flex font-robot-flex-variation-01 grid min-h-screen grid-rows-[auto_1fr_auto] font-light text-pretty;
+  }
+
+  main {
+    @apply min-w-0;
+  }
+
+  details > summary {
+    @apply cursor-pointer list-none;
+  }
+
+  details > summary::-webkit-details-marker {
+    @apply hidden;
+  }
+
+  svg.lucide {
+    font-size: 2px;
+    stroke-width: 1em;
+  }
+}
+
+@layer components {
+  .back-to-top {
+    @apply fixed right-6 bottom-6 z-20 not-focus:sr-only;
+  }
+
+  .skip-to-main {
+    @apply fixed top-6 left-6 z-20 not-focus:sr-only;
+  }
+
+  /**
+   * Noise
+   */
+
+  .noise {
+    @apply opacity-[7%];
+  }
+
+  .noise::after {
+    @apply absolute inset-0 z-0 size-full content-[""];
+    background: url(/images/noise.gif) repeat;
+  }
+
+  /**
+   * RichText
+   */
+
+  .payload-richtext {
+    @apply text-xl leading-[1.4] -tracking-tight;
+  }
+
+  .payload-richtext strong {
+    @apply bolder;
+  }
+
+  .payload-richtext > * + * {
+    @apply mt-[1.15em];
+  }
+
+  .payload-richtext iframe,
+  .payload-richtext img {
+    @apply my-10;
+  }
+
+  .payload-richtext blockquote {
+    @apply my-8 px-8 text-xl italic;
+  }
+
+  .payload-richtext h2 {
+    @apply mt-10 text-3xl font-bold;
+  }
+
+  .payload-richtext h4 {
+    @apply text-2xl font-bold;
+  }
+
+  .payload-richtext h3 {
+    @apply text-xl font-bold;
+  }
+
+  .payload-richtext ul,
+  .payload-richtext ol {
+    @apply flex flex-col gap-[.75em];
+  }
+
+  .payload-richtext li {
+    @apply relative pl-[1.75em];
+  }
+
+  .payload-richtext ul li::before {
+    @apply absolute top-[0.15em] left-0 block size-[1em] content-[""];
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-check-icon lucide-circle-check'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .payload-richtext ol {
+    @apply list-decimal pl-4;
+  }
+}
