@@ -190,19 +190,23 @@
   @apply font-sans font-medium;
 }
 @utility heading-xl {
-  @apply text-5xl leading-none tracking-[-0.01em];
+  @apply font-sans text-5xl leading-none font-medium tracking-[-0.01em];
 }
 @utility heading-lg {
-  @apply text-4xl leading-none tracking-[-0.01em];
+  @apply font-sans text-4xl leading-none font-medium tracking-[-0.01em];
 }
 @utility heading-md {
-  @apply text-3xl leading-[1.1em] tracking-[-0.01em];
+  @apply font-sans text-3xl leading-[1.1em] font-medium tracking-[-0.01em];
 }
 @utility heading-sm {
-  @apply text-2xl leading-tight;
+  @apply font-sans text-2xl leading-tight font-medium;
 }
 @utility heading-xs {
-  @apply text-[1.25rem] leading-tight;
+  @apply font-sans text-[1.25rem] leading-tight font-medium;
+}
+
+@utility overtitle {
+  @apply font-mono leading-tight font-normal tracking-[0.25em] uppercase;
 }
 
 @layer base {

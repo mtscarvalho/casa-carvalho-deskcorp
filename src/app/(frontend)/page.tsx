@@ -1,6 +1,8 @@
+import Ecosystem from "@/components/Ecosystem";
 import { Button } from "@/components/ui/button";
 import { createMetadata } from "@/utilities/create-metadata";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 export async function generateMetadata() {
   return createMetadata({
@@ -40,23 +42,23 @@ export default async function Page() {
           <ul className="flex flex-wrap justify-center gap-4 text-center">
             <li className="flex flex-col gap-2 lg:flex-1">
               <span className="heading-sm text-accent font-bold">10</span>
-              <span>anos de atuação </span>
+              <span className="text-sm">anos de atuação </span>
             </li>
             <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">10</span>
-              <span>anos de atuação </span>
+              <span className="heading-sm text-accent font-bold">72</span>
+              <span className="text-sm">projetos entregues </span>
             </li>
             <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">10</span>
-              <span>anos de atuação </span>
+              <span className="heading-sm text-accent font-bold">25</span>
+              <span className="text-sm">instituições atendidas </span>
             </li>
             <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">10</span>
-              <span>anos de atuação </span>
+              <span className="heading-sm text-accent font-bold">4</span>
+              <span className="text-sm">países na América Latina </span>
             </li>
             <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">10</span>
-              <span>anos de atuação </span>
+              <span className="heading-sm text-accent font-bold">12</span>
+              <span className="text-sm">parceiros estratégicos </span>
             </li>
           </ul>
         </div>
@@ -72,34 +74,85 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="bg-base py-24">
-        <div className="container space-y-10">
+      <section className="bg-base overflow-hidden py-24">
+        <div className="container">
           <h2 className="heading-lg text-primary text-center font-bold">Atuamos onde a tecnologia não pode falhar</h2>
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <li className="bg-accent text-on-primary grid aspect-256/328 size-full items-end rounded p-4">
-              <p>Modernização de sistemas legados sem comprometer a continuidade da operação</p>
-            </li>
-            <li className="bg-accent text-on-primary grid aspect-256/328 size-full items-end rounded p-4">
-              <p>Centralização de parceiros e plataformas para reduzir a fragmentação tecnológica</p>
-            </li>
-            <li className="bg-accent text-on-primary grid aspect-256/328 size-full items-end rounded p-4">
-              <p>Integrações críticas com governança, controle e rastreabilidade</p>
-            </li>
-            <li className="bg-accent text-on-primary grid aspect-256/328 size-full items-end rounded p-4">
-              <p>Incorporação de exigências regulatórias e controle à arquitetura operacional</p>
-            </li>
-          </ul>
+        </div>
+        <div className="relative z-0 my-10">
+          <div className="container">
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <li className="bg-accent-hover relative z-0 grid aspect-6/3 size-full items-end overflow-hidden rounded p-4 text-balance max-sm:p-6 max-sm:py-10 sm:aspect-4/3 lg:aspect-3/4">
+                <p className="text-on-primary lg:text-sm">Modernização de sistemas legados sem comprometer a continuidade da operação</p>
+                <Image className="-z-10 object-cover" src="/assets/pagina-inicial/falhar-01.avif" alt="" fill />
+              </li>
+              <li className="bg-accent-hover relative z-0 grid aspect-6/3 size-full items-end overflow-hidden rounded p-4 text-balance max-sm:p-6 max-sm:py-10 sm:aspect-4/3 lg:aspect-3/4">
+                <p className="text-on-primary lg:text-sm">Centralização de parceiros e plataformas para reduzir a fragmentação tecnológica</p>
+                <Image className="-z-10 object-cover" src="/assets/pagina-inicial/falhar-02.avif" alt="" fill />
+              </li>
+              <li className="bg-accent-hover relative z-0 grid aspect-6/3 size-full items-end overflow-hidden rounded p-4 text-balance max-sm:p-6 max-sm:py-10 sm:aspect-4/3 lg:aspect-3/4">
+                <p className="text-on-primary lg:text-sm">Integrações críticas com governança, controle e rastreabilidade</p>
+                <Image className="-z-10 object-cover" src="/assets/pagina-inicial/falhar-03.avif" alt="" fill />
+              </li>
+              <li className="bg-accent-hover relative z-0 grid aspect-6/3 size-full items-end overflow-hidden rounded p-4 text-balance max-sm:p-6 max-sm:py-10 sm:aspect-4/3 lg:aspect-3/4">
+                <p className="text-on-primary lg:text-sm">Incorporação de exigências regulatórias e controle à arquitetura operacional</p>
+                <Image className="-z-10 object-cover" src="/assets/pagina-inicial/falhar-04.avif" alt="" fill />
+              </li>
+            </ul>
+          </div>
+          <div className="bg-accent text-on-primary absolute top-1/3 w-full -translate-y-1/2 scale-[101%] -rotate-3 p-1.5 max-lg:hidden">
+            <Marquee speed={50} direction="right">
+              <div className="mr-10 flex gap-10">
+                <p className="overtitle text-sm">Core Banking</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">BaaS</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Pagamentos</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Crédito</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Gestão de Fundos</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Risk Management</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Cibersegurança</p>
+                <span className="overtitle text-sm">/</span>
+              </div>
+            </Marquee>
+          </div>
+          <div className="bg-accent-hover text-on-primary absolute top-1/3 -z-10 w-full -translate-y-1/2 scale-[101%] rotate-3 p-1.5 max-lg:hidden">
+            <Marquee speed={50} direction="left">
+              <div className="mr-10 flex gap-10">
+                <p className="overtitle text-sm">Core Banking</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">BaaS</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Pagamentos</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Crédito</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Gestão de Fundos</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Risk Management</p>
+                <span className="overtitle text-sm">/</span>
+                <p className="overtitle text-sm">Cibersegurança</p>
+                <span className="overtitle text-sm">/</span>
+              </div>
+            </Marquee>
+          </div>
+        </div>
+        <div className="container">
           <div className="text-center">
             <Button>Fale com um especialista</Button>
           </div>
         </div>
       </section>
 
-      <section className="relative grid h-screen items-center">
+      <section className="relative grid min-h-screen items-center py-40">
         <div className="container">
           <h2 className="heading-lg text-on-primary mx-auto max-w-xl text-center">
             Da base tecnológica à operação, tudo em um só <strong className="text-accent">ecossistema</strong>
           </h2>
+          <Ecosystem className="mx-auto max-w-xl" />
         </div>
 
         <Image className="inset-0 -z-10 object-cover object-top" src="/assets/pagina-inicial/ecossistema.avif" alt="" fill />
