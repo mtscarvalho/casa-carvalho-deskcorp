@@ -1,3 +1,4 @@
+import { CasesCarousel } from "@/components/CasesCarousel";
 import Ecosystem from "@/components/Ecosystem";
 import { Button } from "@/components/ui/button";
 import { createMetadata } from "@/utilities/create-metadata";
@@ -185,6 +186,7 @@ export default async function Page() {
         <div className="container">
           <h2 className="heading-md text-primary mx-auto max-w-xl text-center font-bold text-balance">Para instituições financeiras que precisam evoluir, sem espaço para falhas</h2>
         </div>
+        <CasesCarousel />
       </section>
 
       <section className="relative">

@@ -1,19 +1,12 @@
+import { getCurrentYear } from "@/utilities/get-current-year";
 import Deskcorp from "../Deskcorp";
 
 export async function Footer() {
   return (
-    <footer className="bg-primary-hover dark text-primary py-12" data-theme="dark">
-      <div className="container grid gap-8 lg:grid-cols-3">
-        <div>
-          <Deskcorp variant="negative" />
-        </div>
-        <div>
-          <h2>Deskcorp</h2>
-          <ul>
-            <li>Página inicial</li>
-          </ul>
-        </div>
-        <div></div>
+    <footer className="bg-primary-hover dark text-on-primary dark py-12">
+      <div className="container flex flex-col items-center gap-4">
+        <Deskcorp className="w-full max-w-54" variant="negative" />
+        <p className="">© {getCurrentYear()} Deskcorp. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
