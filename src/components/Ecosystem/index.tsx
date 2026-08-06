@@ -4,7 +4,7 @@ type EcosystemProps = {
 
 export default function Ecosystem({ className }: EcosystemProps) {
   return (
-    <svg className={className} viewBox="0 0 699 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 699 301" fill="none">
       <rect x="130.178" y="82.3262" width="46.2076" height="46.2076" rx="23.1038" fill="url(#paint0_linear_40000241_688)" />
       <g style={{ mixBlendMode: "overlay" }}>
         <path
@@ -66,7 +66,7 @@ export default function Ecosystem({ className }: EcosystemProps) {
         </g>
       </g>
       <foreignObject x="299.333" y="55.6592" width="99.54" height="99.54">
-        <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: "blur(1.11px)", clipPath: "url(#bgblur_2_40000241_688_clip_path)", height: "100%", width: "100%" }}></div>
+        <div style={{ backdropFilter: "blur(1.11px)", clipPath: "url(#bgblur_2_40000241_688_clip_path)", height: "100%", width: "100%" }}></div>
       </foreignObject>
       <g data-figma-bg-blur-radius="2.22461">
         <g clipPath="url(#clip1_40000241_688)">
