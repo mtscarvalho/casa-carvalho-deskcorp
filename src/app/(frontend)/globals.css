@@ -84,7 +84,7 @@
   --semantic-color-border-secondary: var(--color-neutral-400);
   --semantic-color-border-subtle: var(--color-neutral-200);
   --semantic-color-content-accent: var(--color-orange-600);
-  --semantic-color-content-base: var(--color-neutral-1000);
+  --semantic-color-content-body: var(--color-neutral-1000);
   --semantic-color-content-danger: var(--color-red-strong);
   --semantic-color-content-disabled: var(--color-neutral-500);
   --semantic-color-content-link: var(--color-blue-700);
@@ -118,7 +118,7 @@
   --semantic-color-border-secondary: var(--color-neutral-700);
   --semantic-color-border-subtle: var(--color-neutral-800);
   --semantic-color-content-accent: var(--color-orange-400);
-  --semantic-color-content-base: var(--color-neutral-0);
+  --semantic-color-content-body: var(--color-neutral-0);
   --semantic-color-content-danger: var(--color-red-strong);
   --semantic-color-content-disabled: var(--color-neutral-500);
   --semantic-color-content-link: var(--color-blue-400);
@@ -224,7 +224,7 @@
   }
 
   body {
-    @apply font-sans text-base leading-normal text-pretty;
+    @apply text-body font-sans text-base leading-normal text-pretty;
   }
 
   main {

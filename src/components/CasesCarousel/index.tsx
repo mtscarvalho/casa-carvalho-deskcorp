@@ -8,6 +8,7 @@ import type { Swiper as SwiperInstance } from "swiper/types";
 
 import { cn } from "@/lib/utils";
 import "swiper/css";
+import { Noise } from "../Noise";
 import { Button } from "../ui/button";
 
 type SlideItem = {
@@ -74,7 +75,7 @@ export function CasesCarousel() {
         <Swiper
           a11y={{ enabled: true }}
           breakpoints={{
-            640: { spaceBetween: 24, slidesPerView: 1.5 },
+            960: { spaceBetween: 16, slidesPerView: 1.5 },
             1024: { spaceBetween: 38 },
           }}
           centeredSlides
@@ -94,15 +95,16 @@ export function CasesCarousel() {
 
             return (
               <SwiperSlide id={`finance-slide-${index}`} key={slide.tab} role="tabpanel">
-                <article className="group relative mx-auto aspect-square w-full overflow-hidden rounded-[12px] bg-[#272727] md:aspect-video">
+                <article className="group relative z-0 mx-auto aspect-square w-full overflow-hidden rounded-[12px] bg-[#272727] md:aspect-video">
                   <Image alt="" className="size-full object-cover" fill priority={index === 0} src={slide.image} />
                   <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-neutral-950"></div>
                   <div className={cn("absolute bottom-0 flex w-full gap-4 p-6 transition-opacity duration-300 max-md:flex-col md:items-end md:justify-between md:p-8", selected ? "opacity-100" : "opacity-0")}>
-                    <h2 className="text-on-primary heading-xs md:heading-sm py-1 font-bold text-balance">{slide.title}</h2>
+                    <h2 className="text-on-primary heading-xs md:heading-sm py-1 text-balance">{slide.title}</h2>
                     <Button className="max-md:hidden" variant="accent">
                       Fale com um especialista
                     </Button>
                   </div>
+                  <Noise className="absolute inset-0 -z-10" patternSize={150} patternScaleX={1} patternScaleY={1} patternRefreshInterval={100} patternAlpha={10} />
                 </article>
               </SwiperSlide>
             );
