@@ -3,6 +3,7 @@ import { CasesCarousel } from "@/components/CasesCarousel";
 import Deskcorp from "@/components/Deskcorp";
 import Ecosystem from "@/components/Ecosystem";
 import { Noise } from "@/components/Noise";
+import { Phrases } from "@/components/Phrases";
 import { Button } from "@/components/ui/button";
 import { createMetadata } from "@/utilities/create-metadata";
 import Image from "next/image";
@@ -71,15 +72,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="bg-base grid items-center py-24">
-        <div className="container max-w-4xl text-balance">
-          <div className="text-primary space-y-10 text-center">
-            <p className="heading-md font-bold">Instituições financeiras precisam evoluir sobre estruturas legadas, sistemas fragmentados e exigências regulatórias cada vez mais rígidas.</p>
-            <p className="heading-md font-bold">Cada integração carrega impacto operacional.</p>
-            <p className="heading-md font-bold">Cada falha pode comprometer continuidade, segurança e confiança.</p>
-          </div>
-        </div>
-      </section>
+      <Phrases />
 
       <section className="bg-base overflow-hidden pt-24">
         <div className="container">
@@ -164,7 +157,7 @@ export default async function Page() {
 
       <section className="relative grid min-h-screen items-center py-40">
         <div className="container">
-          <h2 className="heading-lg text-on-primary mx-auto max-w-xl text-center">
+          <h2 className="heading-lg text-on-primary mx-auto mb-10 max-w-xl text-center">
             Da base tecnológica à operação, tudo em um só <strong className="text-accent">ecossistema</strong>
           </h2>
           <Ecosystem className="mx-auto max-w-xl" />
