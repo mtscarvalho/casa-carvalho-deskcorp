@@ -1,5 +1,6 @@
 import { BackgroundVideo } from "@/components/BackgroundVideo";
 import { CasesCarousel } from "@/components/CasesCarousel";
+import CrossfadeImages from "@/components/CrossfadeImages";
 import Deskcorp from "@/components/Deskcorp";
 import Ecosystem from "@/components/Ecosystem";
 import { Noise } from "@/components/Noise";
@@ -20,7 +21,7 @@ export async function generateMetadata() {
 export default async function Page() {
   return (
     <main>
-      <section className="relative z-0 grid min-h-screen items-end">
+      <section className="relative z-0 grid min-h-screen items-end bg-neutral-950">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="md:py-8">
@@ -40,9 +41,24 @@ export default async function Page() {
             </div>
           </div>
         </div>
-        <BackgroundVideo className="-z-20" src="/assets/pagina-inicial/hero.mp4" poster="/assets/pagina-inicial/hero.avif" autoplay />
+
+        <BackgroundVideo className="-z-20 max-md:hidden" src="/assets/pagina-inicial/hero.mp4" poster="/assets/pagina-inicial/hero.avif" autoplay />
+
+        <CrossfadeImages
+          className="absolute inset-0 top-0 -z-20 h-full w-full md:hidden"
+          slideDuration={2000}
+          transitionDuration={300}
+          images={[
+            { src: "/assets/pagina-inicial/hero-tablet-01.avif", alt: "" },
+            { src: "/assets/pagina-inicial/hero-tablet-02.avif", alt: "" },
+            { src: "/assets/pagina-inicial/hero-tablet-03.avif", alt: "" },
+            { src: "/assets/pagina-inicial/hero-tablet-04.avif", alt: "" },
+          ]}
+        />
+
         <Noise className="absolute inset-0 -z-10" patternSize={150} patternScaleX={1} patternScaleY={1} patternRefreshInterval={100} patternAlpha={10} />
         <div className="from-neutral-1000/80 absolute inset-0 -z-10 size-full bg-linear-to-t object-cover" />
+        <div className="from-neutral-1000/80 absolute inset-0 -z-10 size-full bg-linear-to-b object-cover md:opacity-25" />
       </section>
 
       <section className="bg-base py-16">
