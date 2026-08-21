@@ -17,7 +17,7 @@ export function Phrases() {
           }}
         >
           <motion.p
-            className="heading-md font-bold"
+            className="md:heading-md heading-sm font-bold!"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
@@ -27,7 +27,7 @@ export function Phrases() {
           </motion.p>
 
           <motion.p
-            className="heading-md font-bold"
+            className="md:heading-md heading-sm font-bold!"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
@@ -37,7 +37,7 @@ export function Phrases() {
           </motion.p>
 
           <motion.p
-            className="heading-md font-bold"
+            className="md:heading-md heading-sm font-bold!"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },

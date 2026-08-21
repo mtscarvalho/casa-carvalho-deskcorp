@@ -4,7 +4,6 @@ import CrossfadeImages from "@/components/CrossfadeImages";
 import Deskcorp from "@/components/Deskcorp";
 import Ecosystem from "@/components/Ecosystem";
 import { Noise } from "@/components/Noise";
-import { Phrases } from "@/components/Phrases";
 import { Button } from "@/components/ui/button";
 import { createMetadata } from "@/utilities/create-metadata";
 import Image from "next/image";
@@ -61,36 +60,9 @@ export default async function Page() {
         <div className="from-neutral-1000/80 absolute inset-0 -z-10 size-full bg-linear-to-b object-cover md:opacity-25" />
       </section>
 
-      <section className="bg-base py-16">
-        <div className="container">
-          <ul className="flex flex-wrap justify-center gap-4 text-center">
-            <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">10</span>
-              <span className="text-sm">anos de atuação </span>
-            </li>
-            <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">72</span>
-              <span className="text-sm">projetos entregues </span>
-            </li>
-            <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">25</span>
-              <span className="text-sm">instituições atendidas </span>
-            </li>
-            <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">4</span>
-              <span className="text-sm">países na América Latina </span>
-            </li>
-            <li className="flex flex-col gap-2 lg:flex-1">
-              <span className="heading-sm text-accent font-bold">12</span>
-              <span className="text-sm">parceiros estratégicos </span>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* <Phrases /> */}
 
-      <Phrases />
-
-      <section className="bg-base overflow-hidden pt-24">
+      <section className="bg-base overflow-hidden">
         <div className="container">
           <h2 className="heading-lg text-primary text-center font-bold">Atuamos onde a tecnologia não pode falhar</h2>
         </div>
