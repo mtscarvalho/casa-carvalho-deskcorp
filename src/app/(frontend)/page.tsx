@@ -29,7 +29,9 @@ export default async function Page() {
             <div className="bg-base relative rounded-t-xl p-8">
               <div className="space-y-4">
                 <p>A Deskcorp® estrutura, integra e orquestra tecnologias críticas para bancos, fintechs, fundos e instituições financeiras que operam em ambientes regulados e de alta complexidade.</p>
-                <Button>Fale com um especialista</Button>
+                <Button asChild>
+                  <a href="mailto:contato@deskcorp.com.br">Fale com um especialista</a>
+                </Button>
               </div>
               <svg viewBox="0 0 10 10" className="fill-base absolute right-[calc(100%-0.5px)] bottom-[-1px] z-10 size-3" aria-hidden="true">
                 <path d="M0 10A10 10 0 0 0 10 0v10z" />
@@ -60,9 +62,7 @@ export default async function Page() {
         <div className="from-neutral-1000/80 absolute inset-0 -z-10 size-full bg-linear-to-b object-cover md:opacity-25" />
       </section>
 
-      {/* <Phrases /> */}
-
-      <section className="bg-base overflow-hidden">
+      <section className="bg-base overflow-hidden pt-24" id="solucoes">
         <div className="container">
           <h2 className="heading-lg text-primary text-center font-bold">Atuamos onde a tecnologia não pode falhar</h2>
         </div>
@@ -138,12 +138,14 @@ export default async function Page() {
         </div>
         <div className="container">
           <div className="text-center">
-            <Button>Fale com um especialista</Button>
+            <Button asChild>
+              <a href="mailto:contato@deskcorp.com.br">Fale com um especialista</a>
+            </Button>
           </div>
         </div>
       </section>
 
-      <section className="relative grid min-h-screen items-center py-40">
+      <section className="relative grid min-h-screen items-center py-40" id="ecossistema">
         <div className="container">
           <h2 className="heading-lg text-on-primary mx-auto mb-10 max-w-xl text-center">
             Da base tecnológica à operação, tudo em um só <strong className="text-accent">ecossistema</strong>
@@ -195,7 +197,9 @@ export default async function Page() {
             <div className="text-on-primary space-y-4 p-10 text-balance md:col-span-8">
               <h2 className="heading-sm font-bold">Sua operação está preparada para sustentar o próximo ciclo de crescimento?</h2>
               <p>Converse com nossos especialistas e identifique riscos, gargalos e oportunidades de evolução na sua arquitetura tecnológica.</p>
-              <Button variant="accent">Fale com um especialista</Button>
+              <Button variant="accent" asChild>
+                <a href="mailto:contato@deskcorp.com.br">Fale com um especialista</a>
+              </Button>
             </div>
             <div className="relative max-md:hidden md:col-span-4">
               <Deskcorp className="absolute top-1/2 w-full origin-left -translate-y-1/2 scale-125" type="icon" />
