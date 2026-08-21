@@ -84,7 +84,7 @@ export function Header() {
                 </li>
                 <li>
                   <Button size={isOpen ? "lg" : "default"} variant="accent" asChild>
-                    <a href="mailto:contato@deskcorp.com.br" onClick={closeMenu}>
+                    <a href={getWhatsAppLink()} target="_blank" rel="noopener" onClick={closeMenu}>
                       Contato
                     </a>
                   </Button>

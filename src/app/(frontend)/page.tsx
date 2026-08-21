@@ -6,6 +6,7 @@ import Ecosystem from "@/components/Ecosystem";
 import { Noise } from "@/components/Noise";
 import { Button } from "@/components/ui/button";
 import { createMetadata } from "@/utilities/create-metadata";
+import { getWhatsAppLink } from "@/utilities/get-whatsapp-link";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -30,7 +31,9 @@ export default async function Page() {
               <div className="space-y-4">
                 <p>A Deskcorp® estrutura, integra e orquestra tecnologias críticas para bancos, fintechs, fundos e instituições financeiras que operam em ambientes regulados e de alta complexidade.</p>
                 <Button asChild>
-                  <a href="mailto:contato@deskcorp.com.br">Fale com um especialista</a>
+                  <a href={getWhatsAppLink()} target="_blank" rel="noopener">
+                    Fale com um especialista
+                  </a>
                 </Button>
               </div>
               <svg viewBox="0 0 10 10" className="fill-base absolute right-[calc(100%-0.5px)] bottom-[-1px] z-10 size-3" aria-hidden="true">
@@ -139,7 +142,9 @@ export default async function Page() {
         <div className="container">
           <div className="text-center">
             <Button asChild>
-              <a href="mailto:contato@deskcorp.com.br">Fale com um especialista</a>
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener">
+                Fale com um especialista
+              </a>
             </Button>
           </div>
         </div>
@@ -198,7 +203,9 @@ export default async function Page() {
               <h2 className="heading-sm font-bold">Sua operação está preparada para sustentar o próximo ciclo de crescimento?</h2>
               <p>Converse com nossos especialistas e identifique riscos, gargalos e oportunidades de evolução na sua arquitetura tecnológica.</p>
               <Button variant="accent" asChild>
-                <a href="mailto:contato@deskcorp.com.br">Fale com um especialista</a>
+                <a href={getWhatsAppLink()} target="_blank" rel="noopener">
+                  Fale com um especialista
+                </a>
               </Button>
             </div>
             <div className="relative max-md:hidden md:col-span-4">
