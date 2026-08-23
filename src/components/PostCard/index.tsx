@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Media, Post } from "@/payload-types";
 
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/button";
 import { PayloadImage } from "../Payload/Image";
 
 export type PostCardProps = Partial<Post>;
