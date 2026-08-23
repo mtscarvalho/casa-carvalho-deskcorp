@@ -20,7 +20,7 @@ type SlideItem = {
 const slides: SlideItem[] = [
   {
     tab: "Gestoras de fundos",
-    title: "Operações com sistemas financeiros críticos integrados",
+    title: "Gestoras e administradoras de fundos de investimentos",
     image: "/assets/pagina-inicial/verticais-gestoras-de-fundos.avif",
   },
   {
@@ -40,7 +40,7 @@ const slides: SlideItem[] = [
   },
   {
     tab: "Instituições",
-    title: "Gestoras e administradoras de fundos de investimentos",
+    title: "Operações com sistemas financeiros críticos integrados",
     image: "/assets/pagina-inicial/verticais-instituicoes.avif",
   },
 ];
@@ -59,7 +59,7 @@ export function CasesCarousel() {
   return (
     <div className="bg-secondary overflow-hidden">
       <div className="mx-auto mt-10 flex max-w-fit items-center max-lg:hidden">
-        <div aria-label="Categorias do carrossel" className="bg-neutral-0/40 flex max-w-[calc(100vw-2rem)] items-center gap-1 overflow-x-auto rounded-full p-1.5 shadow-[0_1px_0_rgba(255,255,255,0.4)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist">
+        <div aria-label="Categorias do carrossel" className="bg-neutral-0/40 flex max-w-[calc(100vw-2rem)] [scrollbar-width:none] items-center gap-1 overflow-x-auto rounded-full p-1.5 shadow-[0_1px_0_rgba(255,255,255,0.4)] [&::-webkit-scrollbar]:hidden" role="tablist">
           {slides.map((slide, index) => {
             const selected = activeIndex === index;
             return (
@@ -75,8 +75,14 @@ export function CasesCarousel() {
         <Swiper
           a11y={{ enabled: true }}
           breakpoints={{
-            960: { spaceBetween: 16, slidesPerView: 1.5 },
-            1024: { spaceBetween: 38 },
+            960: {
+              spaceBetween: 16,
+              slidesPerView: 1.5,
+            },
+            1024: {
+              spaceBetween: 38,
+              slidesPerView: "auto",
+            },
           }}
           centeredSlides
           grabCursor
@@ -94,7 +100,7 @@ export function CasesCarousel() {
             const selected = activeIndex === index;
 
             return (
-              <SwiperSlide id={`finance-slide-${index}`} key={slide.tab} role="tabpanel">
+              <SwiperSlide className="lg:w-full! lg:max-w-3xl!" id={`finance-slide-${index}`} key={slide.tab} role="tabpanel">
                 <article className="group relative z-0 mx-auto aspect-square w-full overflow-hidden rounded-[12px] bg-[#272727] md:aspect-video">
                   <Image alt="" className="size-full object-cover" fill priority={index === 0} src={slide.image} />
                   <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-neutral-950"></div>
