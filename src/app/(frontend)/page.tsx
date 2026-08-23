@@ -23,7 +23,7 @@ export default async function Page() {
     <main>
       <section className="relative z-0 grid min-h-screen items-end bg-neutral-950">
         <div className="container">
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid items-end gap-8 md:grid-cols-2">
             <div className="md:py-8">
               <h1 className="text-on-primary heading-lg md:heading-xl">Modernize sua operação financeira sem riscos</h1>
             </div>
