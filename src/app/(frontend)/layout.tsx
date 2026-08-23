@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className={`${ibsPlexMono.variable} ${ibsPlexSerif.variable} ${ibsPlexSans.variable} antialiased`}>
         <Header />
         {children}
-        {process.env.NEXT_PUBLIC_ENV === "production" && <GoogleTagManager gtmId="GTM-" />}
+        {process.env.NEXT_PUBLIC_ENV === "production" && <GoogleTagManager gtmId="GTM-TTKQ7ZBV" />}
         <Footer />
       </body>
     </html>
