@@ -65,7 +65,7 @@ export default async function Page() {
         <div className="from-neutral-1000/80 absolute inset-0 -z-10 size-full bg-linear-to-b object-cover md:opacity-25" />
       </section>
 
-      <section className="bg-base overflow-hidden pt-24" id="solucoes">
+      <section className="bg-base overflow-hidden pt-24 pb-1" id="solucoes">
         <div className="container">
           <h2 className="heading-lg text-primary text-center font-bold">Atuamos onde a tecnologia não pode falhar</h2>
         </div>
