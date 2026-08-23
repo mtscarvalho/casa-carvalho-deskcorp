@@ -6,6 +6,7 @@ import { RefObject, useEffect, useRef, useState } from "react";
 import { useEscapeKey } from "@/hooks/useEscapeKey";
 import { useFocusTrap } from "@/hooks/useFocusTrap";
 
+import { getWhatsAppLink } from "@/utilities/get-whatsapp-link";
 import { Menu as MenuIcon, X } from "lucide-react";
 import Deskcorp from "../Deskcorp";
 import { Button } from "../ui/button";
